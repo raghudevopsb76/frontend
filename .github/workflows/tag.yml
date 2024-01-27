@@ -25,11 +25,11 @@ jobs:
     - name: Build
       run: |
         echo $GITHUB_REF_NAME > VERSION
-        zip -r cart-$GITHUB_REF_NAME.zip *
+        zip -r frontend-$GITHUB_REF_NAME.zip *
 
     - name: Release App
       run: |
-        curl -sSf -u "admin:$ARTIFACTORY_PASSWORD" -X PUT  -T cart-$GITHUB_REF_NAME.zip http://artifactory.rdevopsb72.online:8081/artifactory/cart/cart-$GITHUB_REF_NAME.zip
+        curl -sSf -u "admin:$ARTIFACTORY_PASSWORD" -X PUT  -T frontend-$GITHUB_REF_NAME.zip http://artifactory.rdevopsb72.online:8081/artifactory/frontend/frontend-$GITHUB_REF_NAME.zip
       env:
         ARTIFACTORY_PASSWORD: ${{ secrets.ARTIFACTORY_PASSWORD }}
 
