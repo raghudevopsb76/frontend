@@ -22,9 +22,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
-    - name: Install NodeJS Dependencies
-      run: npm install
-
     - name: Build
       run: |
         echo $GITHUB_REF_NAME > VERSION
