@@ -1,7 +1,10 @@
-
-
-
-
-
+ingress:
+  enabled: true
+  className: "nginx"
+  hosts:
+    - host: frontend-dev.rdevopsb72.online
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
 
 buildNo: 8
