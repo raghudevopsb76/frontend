@@ -7,4 +7,4 @@ ingress:
         - path: /
           pathType: ImplementationSpecific
 
-buildNo: 9
+buildNo: 10
